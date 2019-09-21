@@ -1,9 +1,194 @@
+
+* {
+  box-sizing: border-box;
+    color: 	#414a4c;
+}
 body {
-  font-family: 'Helvetica Neue', sans-serif;
+  font-family: 'Be Vietnam', sans-serif;
   text-align: center;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-image:linear-gradient(to bottom, rgba(255,255,255,0.7), rgba(255,255,255,0.7)), url('~/static/onigiri-background.jpg');
+  background-repeat: repeat;
 }
 
-img {
-  display: block;
-  margin: 50px auto;
+.page-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  padding: 20px;
+}
+
+h1 {
+  letter-spacing: 0.1rem;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+h3 {
+  font-size: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 2.25rem;
+  font-weight: 500;
+}
+
+a {
+  color: 	#414a4c;
+  &:hover {
+    letter-spacing: 0.05rem;
+  }
+}
+
+
+.info-container {
+  display: flex;
+  width: 40%;
+  padding: 60px;
+  flex-shrink: 1;
+  flex-direction: column;
+  align-items: center;
+  img {
+    width: 200px;
+    height: auto;
+  }
+}
+
+.info-text {
+  width: 100%;
+  background-color: #fff;
+  padding: 40px;
+}
+.contact {
+  margin: 40px 0;
+  line-height: 1rem;
+  p {
+    margin: 0;
+    margin-bottom: 0.2rem;
+  }
+}
+
+.instagram-container {
+  width: 60%;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#instafeed {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 820px;
+
+  a {
+    width: 100%;
+  }
+}
+
+.fa-heart {
+  display: none;
+}
+
+.img-container {
+  box-sizing: border-box;
+  padding: 10px;
+  width: 33%;
+}
+
+.img-display {
+  width: 100%;
+  padding-bottom: 100%;
+  background-position: center center;
+  background-size: cover;
+}
+
+@media only screen and (max-width: 1400px){
+  .page-container {
+    flex-direction: column;
+  }
+  .info-container {
+    width: 100%;
+    max-width: 600px;
+  }
+  .instagram-container {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 600px){
+  .page-container {
+    padding: 0;
+  }
+  .info-container {
+    padding: 40px;
+  }
+  .instagram-container {
+    padding: 5px;
+    min-width: unset;
+  }
+  .info-text {
+    img {
+      width: 150px;
+    }
+  }
+  .img-container {
+    width: calc(33% - 2px);
+    margin-bottom: 4px;
+    padding: 0;
+    height: auto;
+  }
+  h3 {
+    margin: 1rem;
+    margin-bottom: 1.25rem;
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 600px){
+  .page-container {
+    padding: 0;
+  }
+  .info-container {
+    padding: 10px;
+    margin-bottom: 40px;
+  }
+  .info-text {
+    padding: 20px 10px;
+    img {
+      width: 150px;
+    }
+  }
+  .instagram-container {
+    padding: 0;
+    min-width: unset;
+  }
+
+  .contact {
+    margin: 2rem 0;
+  }
+  h1 {
+    margin-top: 1rem;
+  }
+  p {
+    margin: 1rem;
+  }
+  .img-container {
+    width: calc(33% - 2px);
+    margin-bottom: 4px;
+    padding: 0;
+    height: auto;
+    .img-display {
+      background-position: center center;
+    }
+  }
+  .fa-heart {
+    display: block;
+    margin: 1.5rem 0;
+  }
 }
